@@ -1,0 +1,31 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "hamid",
+    "password" : "hamid"
+}
+###
+GET http://localhost:3000/getUser
+
+###
+POST http://localhost:3000/addExpence
+Content-Type: application/json
+
+{
+    "expencerUserID": "00ac53da-921d-4c20-87b6-29f57eac14bf",
+    "groupUserIds": [
+  {
+    "id": "5ae115be-8aa3-4570-96d9-6b440ab3b8dd"
+  },
+  {
+    "id": "346bac24-faa5-4612-b560-ccbc2302d538"
+  },
+  {
+    "id": "40e78352-449e-4efa-97be-0b055cad7152"
+  }
+],
+    "groupQuantity": "number",
+    "title": "string",
+    "description": "string",
+}
