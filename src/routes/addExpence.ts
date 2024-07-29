@@ -46,3 +46,4 @@ const { expencerUserID, groupUserIds, groupQuantity, title,description } = req.b
     expenses.push(expense)
     res.status(200).send(expense)
 })
+

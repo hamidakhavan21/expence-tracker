@@ -11,21 +11,21 @@ GET http://localhost:3000/getUser
 ###
 POST http://localhost:3000/addExpence
 Content-Type: application/json
+Authorization: 7c92ec59-9649-4f8e-ba38-bcac1ebd0fc9
 
 {
-    "expencerUserID": "00ac53da-921d-4c20-87b6-29f57eac14bf",
-    "groupUserIds": [
-  {
-    "id": "5ae115be-8aa3-4570-96d9-6b440ab3b8dd"
-  },
-  {
-    "id": "346bac24-faa5-4612-b560-ccbc2302d538"
-  },
-  {
-    "id": "40e78352-449e-4efa-97be-0b055cad7152"
-  }
-],
+    "expencerUserID": "7c92ec59-9649-4f8e-ba38-bcac1ebd0fc9",
     "groupQuantity": "number",
-    "title": "string",
-    "description": "string",
+    "title": "shomal",
+    //"description": "string",
+    "groupUserIds": 
+[ {
+    "id": "6228448c-7ccb-44a5-819c-192d64cce16c"
+  },
+  {
+    "id": "43ec4408-f4ac-47be-802c-e7d5e534992f"
+  },
+  {
+    "id": "6c1f0fb8-0e2d-43db-9db3-b9bca13d692f"
+  }]
 }

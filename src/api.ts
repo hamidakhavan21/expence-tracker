@@ -9,7 +9,7 @@ app.use(Express.json());
 
 app.use(userRoutes)
 app.use(getUser)
-app.use("addExpence",addExpence)
+app.use("/addExpence",addExpence)
 
 app.use((req,res,next)=>{
     console.log(req.method,req.url)
@@ -17,5 +17,5 @@ app.use((req,res,next)=>{
 })
 
 app.use((req,res)=>{
-    res.status(404).send({message: "not found"})
+    res.status(404).send({message: "not found 1"})
 })
