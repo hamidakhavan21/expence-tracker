@@ -9,6 +9,7 @@ interface expense {
     groupQuantity: number,
     title: string,
     description: string,
+    price: number
 }
 const expenses : expense [] = []
 export const app = Router()
@@ -22,15 +23,17 @@ app.post("/",(req,res)=>{
         res.status(401).send({message: "Unauthorized"});
         return
     }
-const { expencerUserID, groupUserIds, groupQuantity, title,description } = req.body
+const { expencerUserID, groupUserIds, groupQuantity, title,description,price } = req.body
     //validate
-    if (!isNonEmptyString(title)){
+    if (!isNonEmptyString(title)
+        || !isNonEmptyString(groupUserIds)
+    ){
         res.status(400).send({message: "bad request"})
         return;
     }
-    if (groupUserIds == undefined){
+    if (price == undefined){
         res.status(400)
-        .send({message: "groupUserIds sould be provided"})
+        .send({message: "price sould be provided"})
         return;
     
     }
@@ -42,6 +45,7 @@ const { expencerUserID, groupUserIds, groupQuantity, title,description } = req.b
         groupQuantity: groupUserIds.length,
         title,
         description : description || "",
+        price
     };
     expenses.push(expense)
     res.status(200).send(expense)
